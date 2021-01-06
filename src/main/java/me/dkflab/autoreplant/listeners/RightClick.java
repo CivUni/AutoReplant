@@ -25,7 +25,6 @@ public class RightClick implements Listener {
         Material mainhand = player.getInventory().getItemInMainHand().getType();
         ItemStack offhand = player.getInventory().getItemInOffHand();
         if (action == Action.RIGHT_CLICK_BLOCK && (event.getClickedBlock().getType().equals(Material.DIRT) || event.getClickedBlock().getType().equals(Material.GRASS))) {
-            player.sendMessage(mainhand.toString());
             if (mainhand.equals(Material.DIAMOND_HOE)||mainhand.equals(Material.GOLD_HOE)||mainhand.equals(Material.IRON_HOE)||mainhand.equals(Material.STONE_HOE)||mainhand.equals(Material.WOOD_HOE)) {
                 //wheat
                 if (offhand.getType().equals(Material.SEEDS) && plugin.getConfig().getBoolean("plantwheat")) {
